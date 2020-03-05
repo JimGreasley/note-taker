@@ -2,7 +2,7 @@
 
 ## Description
 
-This application will maintain a "database" of notes. Each note is comprised of a title and a free-format text area.  Notes can be created, saved, and deleted. This application will use express as the backend "server" and save and retrieve note data from a JSON (`db.json`) file.
+This application will maintain a "database" of notes. Each note is comprised of a title and a free-format text area.  Notes can be created, saved, and deleted. This application will use express as the backend "server" and save and retrieve note data from a JSON (`db.json`) file. A unique id, provided by uuid(), is assigned to each new note. This id is used later to delete a specific note.  
 
 Two HTML routes were created:
 
