@@ -76,8 +76,8 @@ app.get("/api/notes", function(req, res) {
 
 app.post("/api/notes", function(req, res) {
   //------------------------------------------------------------------------------
-  // Create new note - receive a new note to save on the request body,
-  // add it to the `db.json` file, and then return the new note to the client.
+  // Create new note - receive a new note, on the request body, to save.
+  // Add it to the `db.json` file and then return the new note to the client.
   //------------------------------------------------------------------------------
 
   var newNote = req.body;
