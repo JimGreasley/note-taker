@@ -1,21 +1,24 @@
 # note-taker
 
 ## Description
-An application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
-* The following HTML routes should be created:
+This application will maintain a "database" of notes. Each note is comprised of a title and a free-format text area.  Notes can be created, saved, and deleted. This application will use express as the backend "server" and save and retrieve note data from a JSON (`db.json`) file.
 
-  * GET `/notes` - Should return the `notes.html` file.
+Two HTML routes were created:
 
-  * GET `*` - Should return the `index.html` file
+  - GET `/notes` - return the `notes.html` file to the client.
 
-* The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
+  - GET `*` - return the `index.html` file to the client.
 
-* The following API routes should be created:
+ Three API routes were created:
 
-  * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
+  - GET `/api/notes` - Read the JSON file and responds with all saved notes to the client.
 
-  * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
+  - POST `/api/notes` - Receives a new note via the request, adds it to the JSON file, and then responds with the new note to the client.
 
-  * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+  - DELETE `/api/notes/:id` - Receives the id of a note to deleted. The note with the matching id will be deleted from the JSON file. The updated array of notes is returned to the client.
 
+
+## Heroku link:
+
+https://mysterious-fortress-96702.herokuapp.com/
